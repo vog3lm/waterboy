@@ -1,0 +1,64 @@
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <PreferenceCategory
+        app:title="Workflow and Usability"
+        app:iconSpaceReserved="false">
+        <de.sit.waterboy.preferences.StatusPreference
+            app:key="restartDeamon"
+            app:title="Restart Alarm Deamon"
+            app:iconSpaceReserved="false"/>
+        <SwitchPreferenceCompat
+            app:key="reminderFlag"
+            app:title="Activate Reminder"
+            app:summary="This allows you to enter a string"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
+        <de.sit.waterboy.preferences.TimePreference
+            app:key="reminderTime"
+            app:title="Reminder Time"
+            app:defaultValue="11:00"
+            app:dependency="reminderFlag"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="reminderSnooze"
+            app:title="Reminder Snooze Time"
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="5"
+            app:dependency="reminderFlag"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Theme and Colors"
+        app:iconSpaceReserved="false">
+        <de.sit.waterboy.preferences.ColorPreference
+            app:key="layoutColor"
+            app:title="Layout Color"
+            app:iconSpaceReserved="false" />
+        <de.sit.waterboy.preferences.ColorPreference
+            app:key="normalColor"
+            app:title="Normal Color"
+            app:iconSpaceReserved="false" />
+        <de.sit.waterboy.preferences.ColorPreference
+            app:key="dangerColor"
+            app:title="Danger Color"
+            app:iconSpaceReserved="false" />
+        <de.sit.waterboy.preferences.ColorPreference
+            app:key="urgentColor"
+            app:title="Urgent Color"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Data Management"
+        app:iconSpaceReserved="false">
+        <Preference
+            app:key="importActivity"
+            app:title="Import"
+            app:iconSpaceReserved="false">
+        </Preference>
+        <Preference
+            app:key="exportActivity"
+            app:title="Export"
+            app:iconSpaceReserved="false">
+        </Preference>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

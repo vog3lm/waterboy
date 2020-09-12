@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".application.Listing">
+    <include layout="@layout/listing" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:gravity="bottom|center_horizontal">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton style="@style/fabMini"
+            android:id="@+id/water"
+            app:layout_constraintBottom_toTopOf="@+id/create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_drop_white_24dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton style="@style/fab"
+            android:id="@+id/create"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_leaf_white_24dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton style="@style/fabMini"
+            android:id="@+id/fertilize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/create"
+            app:srcCompat="@drawable/ic_flash_white_24dp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton style="@style/fabMini"
+            android:id="@+id/soil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fertilize"
+            app:srcCompat="@drawable/ic_shovel_white_24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

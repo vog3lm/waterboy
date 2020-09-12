@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/color"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.larswerkman.holocolorpicker.ColorPicker style="@style/colorBar"
+        android:id="@+id/picker" />
+    <com.larswerkman.holocolorpicker.SVBar style="@style/colorBar"
+        android:id="@+id/svbar" />
+    <com.larswerkman.holocolorpicker.SaturationBar style="@style/colorBar"
+        android:id="@+id/saturationbar" />
+    <com.larswerkman.holocolorpicker.ValueBar style="@style/colorBar"
+        android:id="@+id/valuebar" />
+    <TextView style="@style/colorText"
+        android:id="@+id/hex" />
+    <EditText style="@style/colorText"
+        android:id="@+id/lvl"
+        android:visibility="gone"
+        android:hint="Danger Level (%)"
+        android:digits="0123456789"
+        android:inputType="numberSigned"/>
+</LinearLayout>
